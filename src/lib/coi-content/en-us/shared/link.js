@@ -1,0 +1,13 @@
+export const LINK_SIGN_IN = 'Sign In'
+export const LINK_LOG_OUT = 'Log out'
+export const LINK_HI = 'Hi, '
+export const LINK_TERMS_CONDITION = 'Terms & Conditions'
+export const LINK_PRIVACY_STATEMENT = 'Privacy Statement'
+export const LINK_COOKIES_POLICY = 'Cookies Policy'
+export const LINK_TRADEMARKS = 'Trademarks'
+export const LINK_CONTACTS = 'Contacts'
+export const LINK_FEEDBACK = 'Feedback'
+export const LINK_SITEMAP = 'Site Map'
+
+export const LINK_ABOUT_1 = 'Learn more about this '
+export const LINK_ABOUT_2 = 'new login experience'

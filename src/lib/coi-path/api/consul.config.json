@@ -1,0 +1,13 @@
+{
+  "captchaLanguage": "en_US",
+  "consulVersion": "v1",
+  "keyCloakVersion": "v1",
+  "captchaVersion": "v1",
+  "recoveryVersion": "v1",
+  "dataDictionaryVersion": "v1",
+  "scimVersion": "/scim/v2",
+  "credentialMgmt": "v1.0",
+  "authEndpointBaseUri": "identity.cisco.com",
+  "idpEndpointBaseUri": "identity.cisco.com/api/v1/idp-discovery/discovery-oauth",
+  "apiUrl": "identity.cisco.com/api"
+}

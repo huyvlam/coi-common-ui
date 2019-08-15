@@ -1,0 +1,13 @@
+/*
+ * BOX SHADOW UTIL - all mixin, map, variable, placeholder for styling css box shadow
+**/
+
+$coi-preset-box-shadows: (
+	'primary box shadow': 1px 1px 1px -1px
+);
+
+@mixin box-shadow($style, $color: 'light gray') {
+	@if variable-exist($style) and variable-exist($color) {
+		box-shadow: map-get($coi-preset-box-shadows, $style) get-color($color);
+	}
+}

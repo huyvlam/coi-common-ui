@@ -1,0 +1,117 @@
+{
+  "name": "coi-common-ui",
+  "version": "0.2.2",
+  "description": "A collections of COI user interface modules that are commonly shared across our web applications. Included modules: cisco-sans, coi-authentication, coi-content, coi-dictionary, coi-locale, coi-navstate, coi-path, coi-redirect, coi-sass, coi-scope, coi-service, coi-util, etc.",
+  "author": {
+    "name": "Huy Lam",
+    "organization": "Cisco One Identity"
+  },
+  "contributors": [
+    "Huy Lam",
+    "Sarah Wang",
+    "Te Joy Sornet",
+    "Longbo Qiao",
+    "Lucas Dias"
+  ],
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode=production --env.production",
+    "dev": "webpack --mode=development --env.development --progress --colors --watch",
+    "start": "webpack-dev-server --hot --progress --colors --watch --mode development"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-async-generator-functions": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-transform-object-assign": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.5.5",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "babel-preset-react-app": "^9.0.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "core-js": "^3.2.1",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.1.0",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.8.0",
+    "jest-cli": "^24.8.0",
+    "jsonlint": "^1.6.3",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.9.0",
+    "react-dev-utils": "^9.0.3",
+    "react-dom": "^16.9.0",
+    "regenerator-runtime": "^0.13.3",
+    "sass-loader": "^7.2.0",
+    "sass-resources-loader": "^2.0.1",
+    "style-loader": "^1.0.0",
+    "typescript": "^3.5.3",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0",
+    "yarn-deduplicate": "^1.1.1"
+  },
+  "peerDependencies": {
+    "node-sass": "4.12.0",
+    "sass-resources-loader": "^2.0.1"
+  },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ],
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "js": true,
+        "jsx": true,
+        "modules": true,
+        "spread": true,
+        "restParams": true
+      }
+    },
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "no-undef": 2,
+      "no-unused-vars": 2,
+      "react/jsx-uses-vars": 2,
+      "react/jsx-uses-react": 2
+    },
+    "settings": {
+      "react": {
+        "createClass": "createReactClass",
+        "pragma": "React",
+        "version": "detect",
+        "flowVersion": "0.53"
+      }
+    }
+  }
+}

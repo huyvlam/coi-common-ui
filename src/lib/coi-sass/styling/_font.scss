@@ -1,0 +1,44 @@
+.primary-font, .sans-font {
+  @extend %primary-font-family;
+}
+.secondary-font, .mono-font {
+  @extend %secondary-font-family;
+}
+
+/* Font size */
+.xs-font {
+  @include preset-font-size('xs');
+}
+.sm-font {
+  @include preset-font-size('sm');
+}
+.md-font, .primary-font-size {
+  @include preset-font-size('md');
+}
+.lg-font {
+  @include preset-font-size('lg');
+}
+.xl-font {
+  @include preset-font-size('xl');
+}
+
+/* Font weight */
+.bold {
+  @include font-weight('bold');
+}
+
+.semibold {
+  @include font-weight('semibold');
+}
+
+.normal {
+  @include font-weight('normal');
+}
+
+.semilight {
+  @include font-weight('semilight');
+}
+
+.light {
+  @include font-weight('light');
+}

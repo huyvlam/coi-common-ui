@@ -1,0 +1,43 @@
+.cisco-blue-text {
+  @include text-color('cisco blue');
+}
+
+.lightest-blue-text {
+  @include text-color('lightest blue');
+}
+
+.indigo-text {
+  @include text-color('indigo');
+}
+
+.red-text {
+  @include text-color('red');
+}
+
+.green-text {
+  @include text-color('green');
+}
+
+.orange-text {
+  @include text-color('orange');
+}
+
+.primary-text, .darkest-gray-text {
+  @include text-color('primary text');
+}
+
+.mid-gray-text {
+  @include text-color('mid gray');
+}
+
+.light-gray-text {
+  @include text-color('light gray');
+}
+
+.lightest-gray-text {
+  @include text-color('lightest gray');
+}
+
+.white-text {
+  @include text-color('white');
+}

@@ -1,0 +1,9 @@
+export const CONTACT_SUPPORT_NAME = "Contact Support";
+export const CONTACT_SUPPORT_TITLE = "We're here for you";
+export const CONTACT_SUPPORT_HEADER_DESCRIPTION = "To better assist you, please tell us more about your issue.";
+export const CONTACT_SUPPORT_FINISHED_NAME = "Contact Support Finished";
+export const CONTACT_SUPPORT_FINISHED_TITLE = "We're on it";
+export const CONTACT_SUPPORT_FINISHED_DESCRIPTION = "Thank you for submitting an issue. Please check your email.";
+export const CONTACT_SUPPORT_FINISHED_DESCRIPTION_2 = "Our support team will email you shortly with further details.";
+export const CONTACT_SUPPORT_LINK_NAME = "Contact Support Link";
+export const CONTACT_SUPPORT_LINK_NEED_HELP = "Need Help?";

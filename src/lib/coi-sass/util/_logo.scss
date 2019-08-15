@@ -1,0 +1,43 @@
+$coi-logo-xs: (
+  width: get-preset-pixel(16),
+  height: get-preset-pixel(16)
+);
+$coi-logo-sm: (
+  width: get-preset-pixel(24),
+  height: get-preset-pixel(24)
+);
+$coi-logo-md: (
+  width: get-preset-pixel(32),
+  height: get-preset-pixel(32)
+);
+$coi-logo-lg: (
+  width: get-preset-pixel(40),
+  height: get-preset-pixel(40)
+);
+$coi-logo-xl: (
+  width: get-preset-pixel(48),
+  height: get-preset-pixel(48)
+);
+$coi-logos: (
+  'xs': $coi-logo-xs,
+  'sm': $coi-logo-sm,
+  'md': $coi-logo-md,
+  'lg': $coi-logo-lg,
+  'xl': $coi-logo-xl,
+);
+
+@function get-logo-attribute($size, $attr) {
+  @if map-has-key($coi-logos, $size) {
+    @return map-get(map-get($coi-logos, $size), $attr);
+  }
+}
+
+@mixin cisco-logo($size: 'sm', $url: '/static/svg/cisco-logo.svg', $color: 'cisco blue') {
+  @if map-has-key($coi-logos, $size) {
+    @include background-color($color);
+    -webkit-mask: url($url) no-repeat center;
+    mask: url($url) no-repeat center;
+    height: get-logo-attribute($size, 'height');
+    width: get-logo-attribute($size, 'width');
+  }
+}

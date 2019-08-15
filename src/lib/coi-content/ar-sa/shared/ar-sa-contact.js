@@ -1,0 +1,10 @@
+export const CONTACT_SUPPORT_NAME = "الاتصال بالدعم";
+export const CONTACT_SUPPORT_NAME_2 = "دعم Cisco";
+export const CONTACT_SUPPORT_TITLE = "نحن هنا لأجلك";
+export const CONTACT_SUPPORT_HEADER_DESCRIPTION = "لمساعدتك بشكل أفضل، الرجاء إخبارنا بالمزيد حول المشكلة.";
+export const CONTACT_SUPPORT_FINISHED_NAME = "انتهاء الاتصال بالدعم";
+export const CONTACT_SUPPORT_FINISHED_TITLE = "نحن نعمل على حل المشكلة";
+export const CONTACT_SUPPORT_FINISHED_DESCRIPTION = "نشكرك على إرسال المشكلة. الرجاء التحقق من البريد الإلكتروني.";
+export const CONTACT_SUPPORT_FINISHED_DESCRIPTION_2 = "سيقوم فريق الدعم الخاص بنا بإرسال بريدًا إلكترونيًا إليك بعد ذلك بمزيد من التفاصيل.";
+export const CONTACT_SUPPORT_LINK_NAME = "رابط الاتصال بالدعم";
+export const CONTACT_SUPPORT_LINK_NEED_HELP = "هل تحتاج إلى المساعدة؟";

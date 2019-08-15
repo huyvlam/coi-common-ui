@@ -1,0 +1,77 @@
+/* NO MARGIN */
+.no-margin {
+  margin: 0;
+}
+.no-top-bottom-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.no-left-right-margin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* MARGIN XS */
+.xs-left-right-margin {
+  @include margin('xs', 'left right');
+}
+
+.xs-top-bottom-margin {
+  @include margin('xs', 'top bottom');
+}
+
+.xs-margin {
+  @include margin('xs');
+}
+
+/* MARGIN SM */
+.sm-left-right-margin {
+  @include margin('sm', 'left right');
+}
+
+.sm-top-bottom-margin {
+  @include margin('sm', 'top bottom');
+}
+
+.sm-margin {
+  @include margin('sm');
+}
+
+/* MARGIN MD */
+.md-left-right-margin {
+    @include margin('md', 'left right');
+}
+
+.md-top-bottom-margin {
+    @include margin('md', 'top bottom');
+}
+
+.md-margin {
+  @include margin('md');
+}
+
+/* MARGIN LG */
+.lg-left-right-margin {
+    @include margin('lg', 'left right');
+}
+
+.lg-top-bottom-margin {
+    @include margin('lg', 'top bottom');
+}
+
+.lg-margin {
+  @include margin('lg');
+}
+
+/* MARGIN XL */
+.xl-left-right-margin {
+  @include margin('xl', 'left right');
+}
+
+.xl-top-bottom-margin {
+  @include margin('xl', 'top bottom');
+}
+
+.xl-margin {
+  @include margin('xl');
+}

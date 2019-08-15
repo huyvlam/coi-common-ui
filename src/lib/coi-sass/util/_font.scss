@@ -1,0 +1,109 @@
+/*
+ * FONT UTIL - all mixin, map, variable, placeholder for styling css font
+**/
+
+$coi-sans-font: 'CiscoSans', Roboto, Helvetica, Arial, sans-serif !default;
+$coi-mono-font: Monaco, Inconsolata, Consolas, 'Courier New', Courier, 'Lucida Console', monospace !default;
+$coi-root-font-px: 16;
+
+/*
+ * @desc: return coi custom defined font-family
+ */
+@function get-font-family($type: 'primary font family') {
+	@if $type == 'secondary font family' or $type == 'mono font family' {
+		@return $coi-mono-font;
+	} @else if $type == 'sans font family' {
+			@return $coi-sans-font;
+	} @else {
+		@return $coi-sans-font;
+	}
+}
+
+/*
+ * @desc: return font sise in rem (speficied font size divided by root font size)
+ */
+@function get-font-rem($size, $base: $coi-root-font-px) {
+  @if variable-exist($size) {
+    @return $size/$base#{'rem'};
+  }
+}
+
+/*
+ * @desc: return font size in percentage (speficied font size divided by root)
+ */
+@function get-font-percent($size, $base: $coi-root-font-px) {
+  @if variable-exist($size) {
+    @return $size/$base*100#{'%'};
+  }
+}
+
+/*
+ * @desc: include rem font-size in your css
+ */
+@mixin rem-font-size($px-size, $base: $coi-root-font-px) {
+  @if variable-exist($px-size) {
+    font-size: #{$px-size}px;
+    font-size: get-font-rem($px-size, $base);
+  }
+}
+
+/*
+ * @desc: include percent font-size in your css
+ */
+@mixin percent-font-size($px-size, $base: $coi-root-font-px) {
+  @if variable-exist($px-size) {
+    font-size: get-font-percent($px-size, $base);
+  }
+}
+
+/*
+ * @desc: wrapper function for rem-font-size with predefined values: xs, sm, md, lg, xl
+ * @output: include 'font-size: rem' in your css
+ */
+$coi-preset-font-sizes: (
+	'xs': 10,
+	'sm': 12,
+	'md': 16,
+	'lg': 20,
+	'xl': 26
+);
+@mixin preset-font-size($size, $base: $coi-root-font-px) {
+	@if variable-exist($size) and map-has-key($coi-preset-font-sizes, $size) {
+		@include rem-font-size(map-get($coi-preset-font-sizes, $size));
+	}
+}
+
+/*
+ * @desc: include font-weight property in your css
+ * @input: $weight accepts string value ['normal', 'bold', 'semibold', 'semilight', 'light']
+ *		   $base accepts any integer value, default value is 100
+ * @output: font with speficied weight;
+ * @ex: { @include font-weight('bold') } -> { font-weight: 700; }
+ */
+$coi-font-weights: (
+	'base': 100,
+	'bold': 7,
+	'semibold': 5,
+	'normal': 4,
+	'semilight': 3,
+	'light': 1
+);
+@mixin font-weight($weight: 'normal', $base: map-get($coi-font-weights, 'base')) {
+	@if map-has-key($coi-font-weights, $weight) {
+		font-weight: $base * map-get($coi-font-weights, $weight);
+	}
+}
+
+/*
+ * @desc: include primary (sans-serif) font-family in your css
+ */
+%primary-font-family, %sans-font-family {
+  font-family: get-font-family('primary font family');
+}
+
+/*
+ * @desc: include secondary (monospace) font-family in your css
+ */
+%secondary-font-family, %mono-font-family {
+  font-family: get-font-family('mono font family');
+}

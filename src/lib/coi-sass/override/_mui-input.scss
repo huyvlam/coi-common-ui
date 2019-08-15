@@ -1,0 +1,52 @@
+.MuiInputBase-root {
+  @extend %primary-font-family;
+  @include padding('xs', 'top bottom');
+}
+
+.MuiInput-underline {
+  &:before, &:after {
+    @extend %input-border;
+  }
+
+  &:hover {
+    &:before {
+      @extend %input-border;
+    }
+  }
+
+  &.Mui-error {
+    &:after {
+      @include text-color('red');
+    }
+  }
+}
+
+$translate-y-axis: get-preset-pixel('sm');
+.MuiInputLabel-formControl {
+  transform: translate(0, get-preset-pixel('xs')) scale(1);
+}
+
+.MuiInputLabel-shrink {
+  transform: translate(0, -$translate-y-axis) scale(.75);
+}
+
+.MuiFormLabel-root {
+  &.Mui-focused {
+    @include text-color();
+  }
+}
+
+.MuiFormHelperText-root {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  display: none;
+
+  &.Mui-focused {
+    display: block;
+  }
+  &.Mui-error {
+    @include text-color('red');
+  }
+}

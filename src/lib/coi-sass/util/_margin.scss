@@ -1,0 +1,39 @@
+/*
+ * MARGIN UTIL - all mixin, map, variable, placeholder for styling css margin
+**/
+
+/*
+ * @desc: include/parse margin property in your css
+ * @input: $size accepts fixed value ['xs', 'sm', 'md', 'lg', 'xl'] or any positive integer
+ *				 $edge accepts string value ['all', 'top', 'bottom', 'left', 'right', 'left right', 'right left', 'top bottom',
+ *				 	 'bottom top'], default value is 'all'
+ * @output: margin property with specified size
+ * @ex: { @include margin('lg') } -> { margin: 24px; }
+ */
+ @mixin margin($size, $edge: 'all') {
+	@if variable-exist($size) {
+		@if $edge == 'top' {
+			margin-top: get-preset-pixel($size);
+
+		} @else if $edge == 'bottom' {
+			margin-bottom: get-preset-pixel($size);
+
+		} @else if $edge == 'left' {
+			margin-left: get-preset-pixel($size);
+
+		} @else if $edge == 'right' {
+			margin-right: get-preset-pixel($size);
+
+		} @else if $edge == 'top bottom' or $edge == 'bottom top' {
+			margin-top: get-preset-pixel($size);
+			margin-bottom: get-preset-pixel($size);
+
+		} @else if $edge == 'left right' or $edge == 'right left' {
+			margin-left: get-preset-pixel($size);
+			margin-right: get-preset-pixel($size);
+
+		} @else {
+			margin: get-preset-pixel($size);
+		}
+	}
+}

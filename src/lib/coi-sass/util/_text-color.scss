@@ -1,0 +1,13 @@
+/*
+ * @desc: include text-color property in your css
+ * @input: $color accepts string value ['cisco blue', 'lightest blue', 'indigo', 'red', 'green', 'orange', 'darkest gray', 'mid gray', 'light gray', 'lightest gray']
+ * 			or any other color
+ *		   $opacity accepts values from 0 to 1, default value is 1
+ * @output: text with speficied color;
+ * @ex: { @include text-color('cisco blue') } -> { text-color: rgba(0, 188, 235, 1); }
+ */
+ @mixin text-color($color: 'primary text', $opacity: 1) {
+	@if variable-exist($color) {
+		color: get-color($color, $opacity);
+	}
+}

@@ -1,0 +1,41 @@
+/*
+ * @desc: Override all MUI stylesheet here in this file
+ * NOTE: either add the css class here or in another file then import here
+ */
+
+@import
+  './mui-input';
+
+/*
+ * @desc: override MUI default padding
+ */
+.MuiGrid-item {
+  @include padding('sm');
+}
+
+.MuiButton-root {
+  min-width: initial;
+  @include padding('sm', 'top bottom');
+  @include padding(3, 'bottom');
+  @include padding('md', 'left right');
+  border-radius: get-preset-pixel('md');
+}
+
+.MuiMenuItem-root {
+  min-height: initial;
+  @include padding('sm');
+}
+
+.MuiFormControlLabel-root {
+  @include margin('xs');
+  @include padding('xs');
+  flex: auto;
+}
+
+.MuiFormGroup-root {
+  align-content: space-evenly;
+}
+
+.MuiFormLabel-root {
+  @include text-color('primary text');
+}

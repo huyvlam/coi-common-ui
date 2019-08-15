@@ -1,0 +1,22 @@
+/**
+  * @desc: sass-styling use sass-util js which is injected by webpack.config
+  */
+
+html.coi {
+  /* Because of the html.coi namespace, we need to offset html and set font-size here instead of in baseline */
+	@extend %offset-box-size;
+	@include percent-font-size(10);
+
+	@import
+		'./styling/baseline',
+		'./styling/font',
+		'./styling/border',
+		'./styling/display',
+		'./styling/margin',
+		'./styling/padding',
+		'./styling/position',
+		'./styling/text-alignment',
+		'./styling/background',
+		'./styling/float',
+		'./styling/text-color';
+}

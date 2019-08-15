@@ -1,0 +1,92 @@
+$path-to-asset: './asset/';
+
+/* CiscoSans - 100 normal */
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100;
+  src:
+    local('CiscoSans light'),
+    local('Cisco-Sans light'),
+    url('#{$path-to-asset}CiscoSansTTExtraLight.woff2') format('woff2'), /* Super Modern Browsers */
+    url('#{$path-to-asset}CiscoSansTTExtraLight.woff') format('woff'); /* Modern Browsers */
+}
+
+/* CiscoSans - 700 normal */
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('CiscoSans bold'),
+    local('Cisco-Sans bold'),
+    url('#{$path-to-asset}CiscoSansTTBold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('#{$path-to-asset}CiscoSansTTBold.woff') format('woff'); /* Modern Browsers */
+}
+
+/* CiscoSans - 100 oblique */
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: oblique;
+  font-display: swap;
+  font-weight: 100;
+  src:
+    local('CiscoSans light oblique'),
+    local('Cisco-Sans light oblique'),
+    url('#{$path-to-asset}CiscoSansTTExtraLightOblique.woff2') format('woff2'), /* Super Modern Browsers */
+    url('#{$path-to-asset}CiscoSansTTExtraLightOblique.woff') format('woff'); /* Modern Browsers */
+}
+
+/* CiscoSans - 300 normal */
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src:
+    local('CiscoSans semilight'),
+    local('Cisco-Sans semilight'),
+    url('#{$path-to-asset}CiscoSansTTLight.woff2') format('woff2'), /* Super Modern Browsers */
+    url('#{$path-to-asset}CiscoSansTTLight.woff') format('woff'); /* Modern Browsers */
+}
+
+/* CiscoSans - 300 oblique */
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: oblique;
+  font-display: swap;
+  font-weight: 300;
+  src:
+    local('CiscoSans semilight oblique'),
+    local('Cisco-Sans semilight oblique'),
+    url('#{$path-to-asset}CiscoSansTTLightOblique.woff2') format('woff2'), /* Super Modern Browsers */
+    url('#{$path-to-asset}CiscoSansTTLightOblique.woff') format('woff'); /* Modern Browsers */
+}
+
+/* CiscoSans - 400 normal */
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('CiscoSans'),
+    local('Cisco-Sans'),
+    url('#{$path-to-asset}CiscoSansTTRegular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('#{$path-to-asset}CiscoSansTTRegular.woff') format('woff'); /* Modern Browsers */
+}
+
+/* CiscoSans - 400 oblique */
+@font-face {
+  font-family: 'CiscoSans';
+  font-style: oblique;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('CiscoSans oblique'),
+    local('Cisco-Sans oblique'),
+    url('#{$path-to-asset}CiscoSansTTRegularOblique.woff2') format('woff2'), /* Super Modern Browsers */
+    url('#{$path-to-asset}CiscoSansTTRegularOblique.woff') format('woff'); /* Modern Browsers */
+}

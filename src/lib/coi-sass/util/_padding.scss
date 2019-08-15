@@ -1,0 +1,39 @@
+/*
+ * FONT UTIL - all mixin, map, variable, placeholder for styling css padding
+**/
+
+/*
+ * @desc: include/parse padding property in your css
+ * @input: $size accepts fixed value ['xs', 'sm', 'md', 'lg', 'xl'] or any positive integer
+ *				 $edge accepts string value ['all', 'top', 'bottom', 'left', 'right', 'left right', 'right left', 'top bottom',
+ *				 	 'bottom top'], default value is 'all'
+ * @output: padding property with specified size
+ * @ex: { @include padding('lg') } -> { padding: 24px; }
+ */
+@mixin padding($size, $edge: 'all') {
+	@if variable-exist($size) {
+		@if $edge == 'top' {
+			padding-top: get-preset-pixel($size);
+
+		} @else if $edge == 'bottom' {
+			padding-bottom: get-preset-pixel($size);
+
+		} @else if $edge == 'left' {
+			padding-left: get-preset-pixel($size);
+
+		} @else if $edge == 'right' {
+			padding-right: get-preset-pixel($size);
+
+		} @else if $edge == 'top bottom' or $edge == 'bottom top' {
+			padding-top: get-preset-pixel($size);
+			padding-bottom: get-preset-pixel($size);
+
+		} @else if $edge == 'left right' or $edge == 'right left' {
+			padding-left: get-preset-pixel($size);
+			padding-right: get-preset-pixel($size);
+
+		} @else {
+			padding: get-preset-pixel($size);
+		}
+	}
+}

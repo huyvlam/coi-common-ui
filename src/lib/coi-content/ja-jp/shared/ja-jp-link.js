@@ -1,0 +1,12 @@
+export const LINK_SIGN_IN = "サインイン";
+export const LINK_TERMS_CONDITION = "ご利用条件";
+export const LINK_PRIVACY_STATEMENT = "プライバシー ポリシー";
+export const LINK_COOKIES_POLICY = "Cookies に関するポリシー";
+export const LINK_TRADEMARKS = "商標";
+export const LINK_CONTACTS = "連絡先";
+export const LINK_FEEDBACK = "フィードバック";
+export const LINK_SITEMAP = "サイト マップ";
+export const LINK_ABOUT_1 = "新しいログイン方法についての";
+export const LINK_ABOUT_2 = "詳細はこちら";
+export const LINK_HI = "お世話になっております。 ";
+export const LINK_LOG_OUT = "ログアウト";

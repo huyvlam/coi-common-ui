@@ -1,0 +1,12 @@
+export const LINK_SIGN_IN = "Zaloguj się";
+export const LINK_TERMS_CONDITION = "Warunki i zasady";
+export const LINK_PRIVACY_STATEMENT = "Oświadczenie dotyczące prywatności";
+export const LINK_COOKIES_POLICY = "Zasady dotyczące plików cookie";
+export const LINK_TRADEMARKS = "Znaki towarowe";
+export const LINK_CONTACTS = "Osoby kontaktowe";
+export const LINK_FEEDBACK = "Komentarze";
+export const LINK_SITEMAP = "Mapa witryny";
+export const LINK_ABOUT_1 = "Dowiedz się więcej o tym ";
+export const LINK_ABOUT_2 = "nowe środowisko logowania";
+export const LINK_HI = "Dzień dobry ";
+export const LINK_LOG_OUT = "Wyloguj się";

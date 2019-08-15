@@ -1,0 +1,12 @@
+export const LINK_SIGN_IN = "ลงชื่อเข้าใช้";
+export const LINK_TERMS_CONDITION = "ข้อกำหนดและเงื่อนไข";
+export const LINK_PRIVACY_STATEMENT = "คำชี้แจงสิทธิส่วนบุคคล";
+export const LINK_COOKIES_POLICY = "นโยบายคุกกี้";
+export const LINK_TRADEMARKS = "เครื่องหมายการค้า";
+export const LINK_CONTACTS = "ข้อมูลติดต่อ";
+export const LINK_FEEDBACK = "ความคิดเห็น";
+export const LINK_SITEMAP = "แผนผังเว็บไซต์";
+export const LINK_ABOUT_1 = "เรียนรู้เพิ่มเติมเกี่ยวกับ ";
+export const LINK_ABOUT_2 = "ประสบการณ์การเข้าสู่ระบบรูปแบบใหม่";
+export const LINK_HI = "สวัสดี ";
+export const LINK_LOG_OUT = "ล็อกเอาต์";

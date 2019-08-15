@@ -1,0 +1,73 @@
+/*
+ * DEVICE UTIL - all mixin, map, variable, placeholder for responding css media query
+**/
+
+
+$device-xl: (
+  'min-width': 1920px,
+  'fluid-width': 34%
+);
+$device-lg: (
+  'min-width': 1280px,
+  'max-width': get-map($device-xl, 'min-width') - 1,
+  'fluid-width': 40%
+);
+$device-md: (
+  'min-width': 960px,
+  'max-width': get-map($device-lg, 'min-width') - 1,
+  'fluid-width': 70%
+);
+$device-sm: (
+  'min-width': 600px,
+  'max-width': get-map($device-md, 'min-width') - 1,
+  'fluid-width': 100%
+);
+$device-xs: (
+  'max-width': get-map($device-sm, 'min-width') - 1,
+  'fluid-width': 100%
+);
+
+$devices: (
+  'xs': $device-xs,
+  'sm': $device-sm,
+  'md': $device-md,
+  'lg': $device-lg,
+  'xl': $device-xl
+);
+
+@function get-device-attribute($device-size, $attr) {
+  @if map-has-key($devices, $device-size) {
+    @return map-get(map-get($devices, $device-size), $attr);
+  }
+}
+
+@mixin breakpoint($device-size) {
+  @if map-has-key($devices, $device-size) {
+    @if $device-size == 'xs' {
+      @media (max-width: #{get-device-attribute($device-size, 'max-width')}) { @content; }
+
+    } @else if $device-size == 'sm' {
+      @media (min-width: get-device-attribute($device-size, 'min-width')) { @content; }
+
+    } @else if $device-size == 'md' {
+      @media (min-width: get-device-attribute($device-size, 'min-width')) { @content; }
+
+    } @else if $device-size == 'lg' {
+      @media (min-width: get-device-attribute($device-size, 'min-width')) { @content; }
+
+    } @else if $device-size == 'xl' {
+        @media (min-width: get-device-attribute($device-size, 'min-width')) { @content; }
+
+    } @else {
+      @warn 'Specified break point not supported';
+    }
+  }
+}
+
+@mixin responsive-width() {
+  @each $device, $spec in $devices {
+    @include breakpoint($device) {
+      width: get-device-attribute($device, 'fluid-width');
+    };
+  }
+}

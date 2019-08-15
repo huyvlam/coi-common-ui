@@ -1,0 +1,47 @@
+/*
+ * BORDER UTIL - all mixin, map, variable, placeholder for styling css border
+ */
+
+/*
+ * @desc: include border property in your css
+ * @input: $color accepts string value ['cisco blue', 'lightest blue', 'indigo', 'red', 'green', 'orange', 'darkest gray', 'mid gray', 'light gray', 'lightest gray']
+ * 			or any other color
+		    $edge accepts string value ['all', 'top', 'bottom', 'left', 'right', 'left right', 'right left', 'top bottom',
+ *			'bottom top'], default value is 'all'
+			$size accepts any size value, ex: 2px, 1em,  default value is 1px
+			$style accepts string value ['dotted', 'none', 'hidden', 'dotted', 'solid', 'double', 'groove', 'ridge', 'inset', 'outset'], default value is 'solid'
+ * @output: border property with specified color, edge, size and style
+ * @ex: { @include border('cisco blue') } -> { border: 1px solid rgb(0, 188, 235); }
+ */
+@mixin border($color, $edge: 'all', $size: 1, $style: 'solid') {
+	@if variable-exist($color) {
+		@if $edge == 'top' {
+			border-top: #{$size}px #{$style} get-color($color);
+		} @else if $edge == 'bottom' {
+			border-bottom: #{$size}px #{$style} get-color($color);
+		} @else if $edge == 'left' {
+			border-left: #{$size}px #{$style} get-color($color);
+		} @else if $edge == 'right' {
+			border-right: #{$size}px #{$style} get-color($color);
+		} @else if $edge == 'top bottom' or $edge == 'bottom top' {
+			border-top: #{$size}px #{$style} get-color($color);
+			border-bottom: #{$size}px #{$style} get-color($color);
+		} @else if $edge == 'left right' or $edge == 'right left' {
+			border-left: #{$size}px #{$style} get-color($color);
+			border-right: #{$size}px #{$style} get-color($color);
+		} @else {
+			border: #{$size}px #{$style} get-color($color);
+		}
+	}
+}
+
+%input-border {
+  @include border('light gray', 'bottom');
+}
+
+%menu-item-border {
+  @include border('lightest gray', 'bottom');
+	&:last-of-type {
+		border-bottom: 0;
+	}
+}

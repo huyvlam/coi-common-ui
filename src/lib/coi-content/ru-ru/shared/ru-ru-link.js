@@ -1,0 +1,12 @@
+export const LINK_SIGN_IN = "Вход";
+export const LINK_TERMS_CONDITION = "Правовая информация";
+export const LINK_PRIVACY_STATEMENT = "Заявление о конфиденциальности";
+export const LINK_COOKIES_POLICY = "Использование файлов cookie";
+export const LINK_TRADEMARKS = "Товарные знаки.";
+export const LINK_CONTACTS = "Контакты";
+export const LINK_FEEDBACK = "Обратная связь";
+export const LINK_SITEMAP = "Карта сайта";
+export const LINK_ABOUT_1 = "Подробнее о ";
+export const LINK_ABOUT_2 = "Новая система входа";
+export const LINK_HI = "Здравствуйте! ";
+export const LINK_LOG_OUT = "Выйти";

@@ -1,0 +1,65 @@
+/* COI Baseline
+ * @desc: 1. DO NOT CREATE style for CSS CLASS/ID in this file
+ *				2. offset browser default setting (margin, padding, line-height, box-sizing) for all html elements
+ *				2. redefine elements general setting per COI design spec
+ */
+
+body, a, div, p, ul, ol, li, span, h1, h2, h3, h4, h5, h6,
+article, aside, blockquote, header, footer, main, section,
+input, label, fieldset, textarea, select, option {
+	@extend %offset-box-size;
+}
+
+body {
+	@extend %primary-font-family;
+	@include rem-font-size(16);
+	@include text-color('primary text');
+	@include background-color('primary background');
+}
+
+code {
+	@extend %secondary-font-family;
+	@include rem-font-size(12);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include font-weight('semilight');
+	@include padding('sm');
+	@include margin('sm');
+}
+h1 {
+	@include rem-font-size(32);
+}
+h2 {
+	@include rem-font-size(26);
+}
+h3 {
+	@include rem-font-size(20);
+}
+h4 {
+	@include rem-font-size(16);
+}
+h5 {
+	@include rem-font-size(12);
+}
+h6 {
+	@include rem-font-size(10);
+}
+
+p {
+	@include padding('xs');
+	@include margin('xs');
+}
+
+a {
+	text-decoration: none;
+	@include text-color('cisco blue');
+
+	&:active, &:hover, &:visited {
+		text-decoration: none;
+	}
+
+	&:active, &:hover {
+		@include text-color('indigo')
+	}
+}

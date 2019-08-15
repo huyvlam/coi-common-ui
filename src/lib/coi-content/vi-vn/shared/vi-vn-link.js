@@ -1,0 +1,12 @@
+export const LINK_SIGN_IN = "Đăng nhập";
+export const LINK_TERMS_CONDITION = "Điều khoản và Điều kiện";
+export const LINK_PRIVACY_STATEMENT = "Tuyên bố Quyền riêng tư";
+export const LINK_COOKIES_POLICY = "Chính sách Cookie";
+export const LINK_TRADEMARKS = "Nhãn hiệu";
+export const LINK_CONTACTS = "Liên hệ";
+export const LINK_FEEDBACK = "Phản hồi";
+export const LINK_SITEMAP = "Sơ đồ Trang web";
+export const LINK_ABOUT_1 = "Tìm hiểu thêm về ";
+export const LINK_ABOUT_2 = "trải nghiệm đăng nhập mới này";
+export const LINK_HI = "Xin chào! ";
+export const LINK_LOG_OUT = "Đăng xuất";

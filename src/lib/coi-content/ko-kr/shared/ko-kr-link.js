@@ -1,0 +1,12 @@
+export const LINK_SIGN_IN = "로그인";
+export const LINK_TERMS_CONDITION = "이용 약관";
+export const LINK_PRIVACY_STATEMENT = "개인정보 보호정책";
+export const LINK_COOKIES_POLICY = "쿠키 정책";
+export const LINK_TRADEMARKS = "상표";
+export const LINK_CONTACTS = "연락처";
+export const LINK_FEEDBACK = "피드백";
+export const LINK_SITEMAP = "사이트 맵";
+export const LINK_ABOUT_1 = "새로운 이 로그인 환경에 ";
+export const LINK_ABOUT_2 = "대해 자세히 알아보기";
+export const LINK_HI = "안녕하십니까? ";
+export const LINK_LOG_OUT = "로그 아웃";

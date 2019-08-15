@@ -1,0 +1,12 @@
+export const LINK_SIGN_IN = "Oturum Aç";
+export const LINK_TERMS_CONDITION = "Hükümler ve Koşullar";
+export const LINK_PRIVACY_STATEMENT = "Gizlilik Beyanı";
+export const LINK_COOKIES_POLICY = "Çerez Politikası";
+export const LINK_TRADEMARKS = "Ticari Markalar";
+export const LINK_CONTACTS = "İletişim Bilgileri";
+export const LINK_FEEDBACK = "Geri Bildirim";
+export const LINK_SITEMAP = "Site Haritası";
+export const LINK_ABOUT_1 = "Bu yeni giriş deneyimi ";
+export const LINK_ABOUT_2 = "ile ilgili daha fazla bilgi edinin";
+export const LINK_HI = "Merhaba, ";
+export const LINK_LOG_OUT = "Çıkış Yap";

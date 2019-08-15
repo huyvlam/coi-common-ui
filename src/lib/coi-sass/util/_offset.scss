@@ -1,0 +1,14 @@
+/*
+ * OFFSET UTIL - all placeholder, mixin, map, variable to offset default element setting
+**/
+
+/*
+ * @desc: offset default margin, padding, line-height for all html elements
+ * NOTE: by setting box-sizing to border-box, the margin, padding, border will be calculated as part of the element's width
+ */
+%offset-box-size {
+	margin: 0;
+	padding: 0;
+	line-height: 1.125em;
+	box-sizing: border-box !important; /* see note above */
+}

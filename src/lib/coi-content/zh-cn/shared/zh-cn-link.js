@@ -1,0 +1,12 @@
+export const LINK_SIGN_IN = "登录";
+export const LINK_TERMS_CONDITION = "条款和条件";
+export const LINK_PRIVACY_STATEMENT = "隐私声明";
+export const LINK_COOKIES_POLICY = "Cookie 策略";
+export const LINK_TRADEMARKS = "商标";
+export const LINK_CONTACTS = "联系我们";
+export const LINK_FEEDBACK = "反馈";
+export const LINK_SITEMAP = "网站地图";
+export const LINK_ABOUT_1 = "全新的登录体验，了解更多";
+export const LINK_ABOUT_2 = "详情";
+export const LINK_HI = "您好： ";
+export const LINK_LOG_OUT = "退出登录";

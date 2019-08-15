@@ -1,0 +1,12 @@
+export const LINK_SIGN_IN = "Přihlásit";
+export const LINK_TERMS_CONDITION = "Podmínky použití";
+export const LINK_PRIVACY_STATEMENT = "Prohlášení o ochraně osobních údajů";
+export const LINK_COOKIES_POLICY = "Zásady souborů cookie";
+export const LINK_TRADEMARKS = "Ochranné známky";
+export const LINK_CONTACTS = "Kontakty";
+export const LINK_FEEDBACK = "Zpětná vazba";
+export const LINK_SITEMAP = "Mapa webu";
+export const LINK_ABOUT_1 = "Zjistit o daném problému další informace ";
+export const LINK_ABOUT_2 = "nové přihlašovací prostředí";
+export const LINK_HI = "Dobrý den, ";
+export const LINK_LOG_OUT = "Logout";

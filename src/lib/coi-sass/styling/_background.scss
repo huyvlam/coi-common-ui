@@ -1,0 +1,7 @@
+.primary-background {
+	@include background-color('primary background');
+}
+
+.secondary-background {
+	@include background-color('secondary background');
+}

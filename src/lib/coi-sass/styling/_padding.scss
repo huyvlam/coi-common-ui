@@ -1,0 +1,77 @@
+/* NO PADDING */
+.no-padding {
+  padding: 0;
+}
+.no-top-bottom-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.no-left-right-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* PADDING XS */
+.xs-left-right-padding {
+  @include padding('xs', 'left right');
+}
+
+.xs-top-bottom-padding {
+  @include padding('xs', 'top bottom');
+}
+
+.xs-padding {
+  @include padding('xs');
+}
+
+/* PADDING SM */
+.sm-left-right-padding {
+  @include padding('sm', 'left right');
+}
+
+.sm-top-bottom-padding {
+  @include padding('sm', 'top bottom');
+}
+
+.sm-padding {
+  @include padding('sm');
+}
+
+/* PADDING MD */
+.md-left-right-padding {
+    @include padding('md', 'left right');
+}
+
+.md-top-bottom-padding {
+    @include padding('md', 'top bottom');
+}
+
+.md-padding {
+  @include padding('md');
+}
+
+/* PADDING LG */
+.lg-left-right-padding {
+  @include padding('lg', 'left right');
+}
+
+.lg-top-bottom-padding {
+  @include padding('lg', 'top bottom');
+}
+
+.lg-padding {
+  @include padding('lg');
+}
+
+/* PADDING XL */
+.xl-left-right-padding {
+    @include padding('xl', 'left right');
+}
+
+.xl-top-bottom-padding {
+  @include padding('xl', 'top bottom');
+}
+
+.xl-padding {
+  @include padding('xl');
+}
