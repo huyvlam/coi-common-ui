@@ -117,12 +117,11 @@ module.exports = (env) => {
           include: path.resolve(__dirname, 'src'),
           use: [
             {
+              loader: require.resolve('eslint-loader'),
               options: {
                 formatter: require.resolve('react-dev-utils/eslintFormatter'),
-                eslintPath: require.resolve('eslint'),
-
-              },
-              loader: require.resolve('eslint-loader'),
+                eslintPath: require.resolve('eslint')
+              }
             },
           ]
         },
@@ -133,6 +132,7 @@ module.exports = (env) => {
             // assets loader
             {
               test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+              exclude: /node_modules/,
               loader: require.resolve('url-loader'),
               options: {
                 limit: 10000,
