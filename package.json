@@ -1,6 +1,6 @@
 {
   "name": "coi-common-ui",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A collections of COI user interface modules that are commonly shared across our web applications. Included modules: cisco-sans, coi-authentication, coi-content, coi-dictionary, coi-locale, coi-navstate, coi-path, coi-redirect, coi-sass, coi-scope, coi-service, coi-util, etc.",
   "author": {
     "name": "Huy Lam",
