@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const postCssParser = require('postcss-safe-parser');
 
 // Published Modules
 const LIB_SRC = path.join(__dirname, '/src/lib/');
@@ -95,7 +97,24 @@ module.exports = (env) => {
     output: output,
     plugins: plugins,
     optimization: {
-      minimize: minimize
+      minimize: minimize,
+      minimizer: [
+        new OptimizeCSSAssetsPlugin({
+          cssProcessorOptions: {
+            parser: postCssParser,
+            map: isDevelopment
+              ? {
+                  // `inline: false` forces the sourcemap to be output into a
+                  // separate file
+                  inline: false,
+                  // `annotation: true` appends the sourceMappingURL to the end of
+                  // the css file, helping the browser find the sourcemap
+                  annotation: true,
+                }
+              : false
+          },
+        })
+      ]
     },
     resolve: {
       extensions: ['*', '.css', '.scss', '.sass', '.js', '.jsx', '.ts', '.tsx'],
