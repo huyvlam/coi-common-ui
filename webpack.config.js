@@ -40,17 +40,21 @@ let mode = 'development';
 let minimize = false;
 let devtool = 'cheap-module-source-map';
 let devServer = {
-  contentBase: path.resolve(__dirname, 'dist/'),
+  contentBase: path.resolve(__dirname, 'public/'),
   compress: true,
   port: 9000
 };
 let entry = {main: './src/doc/index.js'};
 let output = {
   filename: '[name].js',
-  path: path.resolve(__dirname, 'dist/')
+  path: path.resolve(__dirname, 'public/')
 };
 let plugins = [
   new CleanWebpackPlugin(),
+  new MiniCssExtractPlugin({
+    filename: '[name].css',
+    chunkFilename: '[name].css'
+  }),
   new HtmlWebpackPlugin({
     inject: true,
     filename: 'index.html',
