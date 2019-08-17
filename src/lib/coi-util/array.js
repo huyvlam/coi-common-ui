@@ -50,8 +50,6 @@ export const replaceAt = (index, source = [], replacement) => {
  * @desc: helper method used in Array.prototype.sort() to sort all types
  * @param: $direction - asc | des [default: asc]
  * @return: (direction) => {}
- * @usage: > [5,1,8,9,13,4].sort(arrSort())
- *         < [1, 4, 5, 8, 9, 13]
  */
 export const sortAll = (direction = 'asc') => {
   return (direction === 'des') ?
@@ -64,11 +62,33 @@ export const sortAll = (direction = 'asc') => {
  * @param: $attr - the key/attribute of the object to sort by
  *         $direction - asc | des [default: asc]
  * @return: (attr, direction) => {}
- * @usage: [{a:10}, {a:1}, {a:5}, {a:4}].sort(arrSortObject('a'))
- *         < [{a:1}, {a:4}, {a:5}, {a:10}]
  */
 export const sortObject = (attr, direction = 'asc') => {
   return (direction === 'des') ?
     (A, B) => +(A[attr] < B[attr]) || +(A[attr] === B[attr]) - 1 :
     (A, B) => +(A[attr] > B[attr]) || +(A[attr] === B[attr]) - 1;
+};
+
+/** @desc: helper method used with Array.prototype.sort() to localeCompare primitive type or object
+ * @param: $locales - unicode extension key for localeCompare
+ *         $options - locale object with flags like: sensitivity, caseFirst, etc.
+ *         $direction - asc | des [default: asc]
+ *         $attr - the key/attribute of the object (* needed only for array of objects)
+ * @return: (attr, direction) => {}
+ * @usage: ['a', 'BbBb', 'A', 'bBB', 'á'].sort(sortLocaleCompare({
+ *           locales: 'kf', options: {sensitivity: 'case'}
+           }));
+ *         -> ["a", "á", "A", "bBB", "BbBb"]
+ */
+export const sortLocaleCompare = ({ locales, options = {}, direction = 'asc', attr } = {}) => {
+  const areString = (A, B) => ((A).constructor === String && (B).constructor === String);
+  const areObject = (A, B) => ((A).constructor === Object && (B).constructor === Object);
+
+  return (direction === 'des') ?
+    (A, B) => areObject(A, B) ?
+      (B[attr].localeCompare(A[attr], locales, options)) :
+      (B).localeCompare(A, locales, options) :
+    (A, B) => areObject(A, B) ?
+      (A[attr].localeCompare(A[attr], locales, options)) :
+      (A).localeCompare(B, locales, options);
 };
